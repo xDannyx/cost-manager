@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { signup } from "@/app/login/actions";
 
 export function RegisterForm({
   className,
@@ -57,7 +58,7 @@ export function RegisterForm({
                   <Input
                     id="email"
                     type="email"
-                    placeholder="m@example.com"
+                    placeholder="email@example.com"
                     required
                   />
                 </div>
@@ -73,7 +74,7 @@ export function RegisterForm({
                   </div>
                   <Input id="password" type="password" required />
                 </div>
-                <Button type="submit" className="w-full">
+                <Button type="submit" formAction={signup} className="w-full">
                   Register
                 </Button>
               </div>
